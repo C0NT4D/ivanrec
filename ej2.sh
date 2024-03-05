@@ -2,7 +2,7 @@
 
 while read -r linea; do
 nota=$(echo "$linea" | awk '{print $3}')
-if [$nota -le 5]; then
+if [$nota -gt 5]; then
 ((aprobado ++))
 else
 ((suspendido ++))
